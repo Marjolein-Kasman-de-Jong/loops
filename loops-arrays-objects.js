@@ -16,9 +16,9 @@ const scores = [
 // 66
 // ==========================================
 
-
-
-
+for (i = 0; i < scores.length; i++) {
+    console.log(scores[i].score);
+}
 
 // ==========================================
 // Opdracht 1b
@@ -32,9 +32,23 @@ const scores = [
 // D
 // ==========================================
 
-
-
-
+for (i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60) {
+        console.log('F');
+    }
+    else if (scores[i].score < 70) {
+        console.log('D');
+    }
+    else if (scores[i].score < 80) {
+        console.log('C');
+    }
+    else if (scores[i].score < 90) {
+        console.log('B');
+    }
+    else {
+        console.log('A');
+    }
+}
 
 // ==========================================
 // Opdracht 1c
@@ -49,9 +63,27 @@ const scores = [
 //  ];
 // ==========================================
 
+console.log(scores);
 
+for (i = 0; i < scores.length; i++) {
+    if (scores[i].score < 60) {
+        scores[i].grade = 'F';
+    }
+    else if (scores[i].score < 70) {
+        scores[i].grade = 'D';
+    }
+    else if (scores[i].score < 80) {
+        scores[i].grade = 'C';
+    }
+    else if (scores[i].score < 90) {
+        scores[i].grade = 'B';
+    }
+    else {
+        scores[i].grade = 'A';
+    }
+}
 
-
+console.log(scores);
 
 // ==========================================
 // Opdracht 2
@@ -75,17 +107,25 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+console.log(NOVIEmployees);
 
+for (i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = `${NOVIEmployees[i].firstName}.${NOVIEmployees[i].lastName}@novi.nl`;
+}
 
-
-
+console.log(NOVIEmployees);
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
+console.log(NOVIEmployees);
 
+for (i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = `${NOVIEmployees[i].firstName}.${NOVIEmployees[i].lastName}@novi.nl`.toLowerCase();
+}
 
+console.log(NOVIEmployees);
 
 // ==========================================
 // Opdracht 3
@@ -131,5 +171,37 @@ const students = [
 // ]
 // ==========================================
 
+console.log(students);
 
+for (i = 0; i < students.length; i++) {
+    let neighborhood = '';
+    switch(students[i].zipCode) {
+        case '3513':
+            neighborhood = 'Pijlsweerd';
+            break;
+        case '3514':
+            neighborhood = 'Vogelenbuurt';
+            break;
+        case '3512':
+            neighborhood = 'Binnenstad';
+            break;
+        case '3531':
+            neighborhood = 'Lombok';
+            break;
+        case '3572':
+            neighborhood = 'Wittevrouwen';
+            break;
+        case '3581':
+            neighborhood = 'Oudwijk';
+            break;
+        case '3583':
+            neighborhood = 'Schildersbuurt';
+            break;
+        default:
+            neighborhood = 'Unknown';
+            break;
+    }
+    students[i].neighborhood = neighborhood;
+}
 
+console.log(students);
